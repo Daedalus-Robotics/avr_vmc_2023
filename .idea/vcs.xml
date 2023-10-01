@@ -2,5 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/avr_2023_common_interfaces" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/avr_pcc_2023_interfaces" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/avr_vmc_2023_status_interfaces" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/avr_vmc_2023_status_lights" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/micro-ROS-Agent" vcs="Git" />
   </component>
 </project>
