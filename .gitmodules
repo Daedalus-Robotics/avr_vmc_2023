@@ -10,3 +10,6 @@
 [submodule "avr_pcc_2023_interfaces"]
 	path = avr_pcc_2023_interfaces
 	url = https://github.com/Daedalus-Robotics/avr_pcc_2023_interfaces.git
+[submodule "micro-ROS-Agent"]
+	path = micro-ROS-Agent
+	url = https://github.com/micro-ROS/micro-ROS-Agent.git
