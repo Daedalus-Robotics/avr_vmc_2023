@@ -1,0 +1,12 @@
+[submodule "avr_2023_common_interfaces"]
+	path = avr_2023_common_interfaces
+	url = https://github.com/Daedalus-Robotics/avr_2023_common_interfaces.git
+[submodule "avr_vmc_2023_status_interfaces"]
+	path = avr_vmc_2023_status_interfaces
+	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_status_interfaces.git
+[submodule "avr_vmc_2023_status_lights"]
+	path = avr_vmc_2023_status_lights
+	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_status_lights.git
+[submodule "avr_pcc_2023_interfaces"]
+	path = avr_pcc_2023_interfaces
+	url = https://github.com/Daedalus-Robotics/avr_pcc_2023_interfaces.git
