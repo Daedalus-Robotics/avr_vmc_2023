@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source /opt/ros/foxy/setup.bash
 source /home/daedalus/avr_ws/install/setup.bash
 
