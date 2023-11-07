@@ -64,13 +64,14 @@ def generate_launch_description():
 
     # ---------- ZED ----------
     zed_wrapper = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([
-                PathJoinSubstitution([
-                    FindPackageShare('zed_wrapper'),
-                    'launch',
-                    'zedm.launch.py'
-                ])
-            ])
+            launch_description_source=PythonLaunchDescriptionSource([
+                get_package_share_directory('zed_wrapper'),
+                '/launch/include/zed_camera.launch.py'
+            ]),
+            launch_arguments={
+                'camera_model': 'zedm',
+                'config_path': os.path.join(get_package_share_directory('avr_vmc_2023'), 'config', 'zed_config.yaml')
+            }.items()
     )
 
     # ---------- BDU ----------
