@@ -13,3 +13,9 @@
 [submodule "micro-ROS-Agent"]
 	path = micro-ROS-Agent
 	url = https://github.com/micro-ROS/micro-ROS-Agent.git
+[submodule "zed-ros2-wrapper"]
+	path = zed-ros2-wrapper
+	url = https://github.com/stereolabs/zed-ros2-wrapper.git
+[submodule "avr_vmc_2023_bdu"]
+	path = avr_vmc_2023_bdu
+	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_bdu.git

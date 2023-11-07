@@ -7,5 +7,7 @@
     <mapping directory="$PROJECT_DIR$/avr_vmc_2023_status_interfaces" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/avr_vmc_2023_status_lights" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/micro-ROS-Agent" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zed-ros2-wrapper" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zed-ros2-wrapper/zed-ros2-interfaces" vcs="Git" />
   </component>
 </project>
