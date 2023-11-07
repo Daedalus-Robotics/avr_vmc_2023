@@ -19,4 +19,9 @@ install(DIRECTORY launch
 install(DIRECTORY config
         DESTINATION share/${PROJECT_NAME}/)
 
+install(PROGRAMS scripts/install.bash
+        DESTINATION lib/${PROJECT_NAME})
+install(PROGRAMS scripts/uninstall.bash
+        DESTINATION lib/${PROJECT_NAME})
+
 ament_package()
