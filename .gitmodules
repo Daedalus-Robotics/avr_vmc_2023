@@ -13,6 +13,7 @@
 [submodule "micro-ROS-Agent"]
 	path = micro-ROS-Agent
 	url = https://github.com/micro-ROS/micro-ROS-Agent.git
+	branch = foxy
 [submodule "zed-ros2-wrapper"]
 	path = zed-ros2-wrapper
 	url = https://github.com/stereolabs/zed-ros2-wrapper.git
