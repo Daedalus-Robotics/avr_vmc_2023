@@ -1,3 +1,6 @@
+import os
+
+from ament_index_python import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess, IncludeLaunchDescription, LogInfo, RegisterEventHandler
 from launch.event_handlers import OnProcessStart
@@ -66,7 +69,7 @@ def generate_launch_description():
     zed_wrapper = IncludeLaunchDescription(
             launch_description_source=PythonLaunchDescriptionSource([
                 get_package_share_directory('zed_wrapper'),
-                '/launch/include/zed_camera.launch.py'
+                '/launch/zed_camera.launch.py'
             ]),
             launch_arguments={
                 'camera_model': 'zedm',
