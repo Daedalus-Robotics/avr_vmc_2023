@@ -22,10 +22,10 @@ def generate_launch_description():
     # )
 
     # ---------- Status Lights ----------
-    status_lights_node = Node(
-            package='avr_vmc_2023_status_lights',
-            executable='status_lights_node'
-    )
+    # status_lights_node = Node(
+    #         package='avr_vmc_2023_status_lights',
+    #         executable='status_lights_node'
+    # )
 
     # ---------- PCC ----------
     pcc_uros_agent = Node(
