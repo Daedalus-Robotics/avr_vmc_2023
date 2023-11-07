@@ -1,0 +1,11 @@
+[Unit]
+Description="A service to run the vmc_launch.py file at boot"
+
+[Service]
+Type=simple
+User=daedalus
+ExecStart=/home/daedalus/avr_ws/src/avr_vmc_2023/avr_vmc_2023/scripts/start.bash
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
