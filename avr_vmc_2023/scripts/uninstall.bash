@@ -1,2 +1,2 @@
-sudo systemctl stop vmc.launch
-sudo systemctl disable vmc.launch
+sudo systemctl stop vmc.service
+sudo systemctl disable vmc.service
