@@ -85,9 +85,9 @@ def generate_launch_description():
                 '/launch/csi_driver_launch.py'
             ]),
             launch_arguments={
-                'framerate': 30,
-                'height': 720,  # ToDo: Recalibrate for 1640x1232
-                'width': 1280,
+                'framerate': '30',
+                'height': '720',  # ToDo: Recalibrate for 1640x1232
+                'width': '1280',
                 'info_file': PathJoinSubstitution([
                     FindPackageShare('avr_vmc_2023'),
                     'config',
