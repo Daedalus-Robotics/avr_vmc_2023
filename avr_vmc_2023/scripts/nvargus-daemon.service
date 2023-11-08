@@ -1,0 +1,16 @@
+[Unit]
+Description=Argus daemon
+After=nv.service
+After=nvpmodel.service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=daedalus
+ExecStart=+/usr/sbin/nvargus-daemon
+StandardOutput=syslog
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
