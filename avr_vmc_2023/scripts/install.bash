@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+mkdir /home/daedalus/.ros || true
+cp "$(dirname "$0")/../config/csi.yaml" /home/daedalus/.ros/csi.yaml
+
 sudo cp "$(dirname "$0")/vmc.service" /etc/systemd/system/
 sudo cp "$(dirname "$0")/nvargus-daemon.service" /etc/systemd/system/
 
