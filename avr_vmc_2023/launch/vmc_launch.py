@@ -81,7 +81,7 @@ def generate_launch_description():
     csi_driver = IncludeLaunchDescription(
             launch_description_source=PythonLaunchDescriptionSource([
                 get_package_share_directory('avr_vmc_2023_csi_driver'),
-                '/launch/csi_driver.launch.py'
+                '/launch/csi_driver_launch.py'
             ]),
             launch_arguments={
                 'framerate': 30,
