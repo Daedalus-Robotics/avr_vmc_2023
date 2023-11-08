@@ -88,7 +88,11 @@ def generate_launch_description():
                 'framerate': '15',
                 'height': '720',  # ToDo: Recalibrate for 1640x1232
                 'width': '1280',
-                'info_file': 'csi.yaml'
+                'info_file': PathJoinSubstitution([
+                    FindPackageShare('avr_vmc_2023'),
+                    'config',
+                    'csi.yaml'
+                ])
             }.items()
     )
 
