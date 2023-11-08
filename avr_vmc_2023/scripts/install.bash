@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-sudo cp "$(dirname "$0")/*.service" /etc/systemd/system/
+sudo cp "$(dirname "$0")/vmc.service" /etc/systemd/system/
+sudo cp "$(dirname "$0")/nvargus-daemon.service" /etc/systemd/system/
 
 sudo systemctl daemon-reload
 
