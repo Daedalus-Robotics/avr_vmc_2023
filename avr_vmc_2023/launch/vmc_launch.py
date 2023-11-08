@@ -83,8 +83,8 @@ def generate_launch_description():
             executable='bdu_trigger_node',
             parameters=[
                 {
-                    'hold_duration': 0.6,
-                    'max_value': 220,
+                    'hold_duration': 0.75,
+                    'max_value': 255,
                     'min_value': 0,
                     'servo_num': 0
                 }
