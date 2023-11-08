@@ -1,0 +1,20 @@
+image_width: 1280
+image_height: 720
+camera_name: csi_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [784.0756786399139, 0, 677.124825443364, 0, 784.9009527658286, 385.33983488708003, 0, 0, 1]
+distortion_model: fisheye
+distortion_coefficients:
+  rows: 1
+  cols: 4
+  data: [-0.013826167055651659, -0.11999744016996756, 0.2825695466585381, -0.22616481734332383]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [784.0756786399139, 0, 677.124825443364, 0, 0, 784.9009527658286, 385.33983488708003, 0, 0, 0, 1, 0]

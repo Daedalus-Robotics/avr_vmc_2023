@@ -77,6 +77,22 @@ def generate_launch_description():
             }.items()
     )
 
+    # ---------- CSI ----------
+    csi_driver = IncludeLaunchDescription(
+            launch_description_source=PythonLaunchDescriptionSource([
+                get_package_share_directory('avr_vmc_2023_csi_driver'),
+                '/launch/csi_driver.launch.py'
+            ]),
+            launch_arguments={
+                'framerate': 30,
+                'height': 720,  # ToDo: Recalibrate for 1640x1232
+                'width': 1280,
+                'info_file': os.path.join(os.path.abspath(get_package_share_directory('avr_vmc_2023')),
+                                          'config',
+                                          'csi.yaml')
+            }.items()
+    )
+
     # ---------- BDU ----------
     bdu_trigger = Node(
             package='avr_vmc_2023_bdu',
@@ -98,6 +114,7 @@ def generate_launch_description():
         px4_uros_agent,
         bdu_trigger,
         zed_wrapper,
+        csi_driver,
         RegisterEventHandler(
             OnProcessStart(
                 target_action=pcc_uros_agent,
