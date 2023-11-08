@@ -1,6 +1,3 @@
-import os
-
-from ament_index_python import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess, IncludeLaunchDescription, LogInfo, RegisterEventHandler
 from launch.event_handlers import OnProcessStart
@@ -68,28 +65,34 @@ def generate_launch_description():
     # ---------- ZED ----------
     zed_wrapper = IncludeLaunchDescription(
             launch_description_source=PythonLaunchDescriptionSource([
-                get_package_share_directory('zed_wrapper'),
+                FindPackageShare('zed_wrapper'),
                 '/launch/zed_camera.launch.py'
             ]),
             launch_arguments={
                 'camera_model': 'zedm',
-                'config_path': os.path.join(get_package_share_directory('avr_vmc_2023'), 'config', 'zed_config.yaml')
+                'config_path': PathJoinSubstitution([
+                        FindPackageShare('avr_vmc_2023'),
+                        'config',
+                        'zed_config.yaml'
+                ])
             }.items()
     )
 
     # ---------- CSI ----------
     csi_driver = IncludeLaunchDescription(
             launch_description_source=PythonLaunchDescriptionSource([
-                get_package_share_directory('avr_vmc_2023_csi_driver'),
+                FindPackageShare('avr_vmc_2023_csi_driver'),
                 '/launch/csi_driver_launch.py'
             ]),
             launch_arguments={
                 'framerate': 30,
                 'height': 720,  # ToDo: Recalibrate for 1640x1232
                 'width': 1280,
-                'info_file': os.path.join(os.path.abspath(get_package_share_directory('avr_vmc_2023')),
-                                          'config',
-                                          'csi.yaml')
+                'info_file': PathJoinSubstitution([
+                    FindPackageShare('avr_vmc_2023'),
+                    'config',
+                    'csi.yaml'
+                ])
             }.items()
     )
 
