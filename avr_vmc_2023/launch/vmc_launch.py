@@ -6,6 +6,7 @@ from launch.substitutions import FindExecutable, PathJoinSubstitution
 
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from launch_xml.launch_description_sources import XMLLaunchDescriptionSource
 
 
 def generate_launch_description():
@@ -110,6 +111,18 @@ def generate_launch_description():
             ]
     )
 
+    # ---------- ROSBridge ----------
+    ros_bridge = IncludeLaunchDescription(
+            launch_description_source=XMLLaunchDescriptionSource([
+                FindPackageShare('rosbridge_server'),
+                '/launch/rosbridge_websocket_launch.xml'
+            ]),
+            launch_arguments={
+                'use_compression': 'true',
+                'call_services_in_new_thread': 'true'
+            }.items()
+    )
+
     return LaunchDescription([
         # diagnostic_aggregator,
         # status_lights_node,
@@ -118,6 +131,7 @@ def generate_launch_description():
         bdu_trigger,
         zed_wrapper,
         csi_driver,
+        ros_bridge,
         RegisterEventHandler(
             OnProcessStart(
                 target_action=pcc_uros_agent,

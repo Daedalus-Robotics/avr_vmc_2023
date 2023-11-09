@@ -7,7 +7,7 @@
   <maintainer email="hunterbaker@me.com">Hunter Baker</maintainer>
   <license>LGPL-3.0-only</license>
 
-  <exec_depend>mavros</exec_depend>
+  <exec_depend>rosbridge_suite</exec_depend>
   <exec_depend>micro_ros_agent</exec_depend>
   <exec_depend>avr_vmc_2023_status_lights</exec_depend>
 
