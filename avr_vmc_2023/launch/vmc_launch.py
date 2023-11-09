@@ -104,7 +104,7 @@ def generate_launch_description():
             parameters=[
                 {
                     'hold_duration': 0.75,
-                    'max_value': 255,
+                    'max_value': 200,
                     'min_value': 0,
                     'servo_num': 0
                 }
