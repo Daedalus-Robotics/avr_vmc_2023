@@ -112,6 +112,16 @@ def generate_launch_description():
             ]
     )
 
+    auton_drop = Node(
+            package='avr_vmc_2023_auton_drop',
+            executable='auton_drop_node',
+            parameters=[
+                {
+                    'delay': 1.0
+                }
+            ]
+    )
+
     # ---------- ROSBridge ----------
     ros_bridge = IncludeLaunchDescription(
             launch_description_source=XMLLaunchDescriptionSource([
@@ -130,6 +140,7 @@ def generate_launch_description():
         pcc_uros_agent,
         px4_uros_agent,
         bdu_trigger,
+        auton_drop,
         zed_wrapper,
         csi_driver,
         ros_bridge,

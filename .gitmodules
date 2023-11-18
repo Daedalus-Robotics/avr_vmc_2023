@@ -26,3 +26,6 @@
 [submodule "avr_vmc_2023_csi_driver"]
 	path = avr_vmc_2023_csi_driver
 	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_csi_driver.git
+[submodule "avr_vmc_2023_auton_drop"]
+	path = avr_vmc_2023_auton_drop
+	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_auton_drop.git
