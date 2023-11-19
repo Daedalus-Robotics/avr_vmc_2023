@@ -29,3 +29,9 @@
 [submodule "avr_vmc_2023_auton_drop"]
 	path = avr_vmc_2023_auton_drop
 	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_auton_drop.git
+[submodule "apriltag_msgs"]
+	path = apriltag_msgs
+	url = https://github.com/christianrauch/apriltag_msgs.git
+[submodule "apriltag_ros"]
+	path = apriltag_ros
+	url = https://github.com/christianrauch/apriltag_ros.git
