@@ -35,3 +35,6 @@
 [submodule "apriltag_ros"]
 	path = apriltag_ros
 	url = https://github.com/christianrauch/apriltag_ros.git
+[submodule "avr_gcc_2023_interfaces"]
+	path = avr_gcc_2023_interfaces
+	url = https://github.com/Daedalus-Robotics/avr_gcc_2023_interfaces/
