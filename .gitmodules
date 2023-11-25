@@ -38,3 +38,9 @@
 [submodule "avr_vmc_2023_auton_drop_interfaces"]
 	path = avr_vmc_2023_auton_drop_interfaces
 	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_auton_drop_interfaces.git
+[submodule "avr_vmc_2023_action_bridge"]
+	path = avr_vmc_2023_action_bridge
+	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_action_bridge.git
+[submodule "avr_vmc_2023_action_bridge_interfaces"]
+	path = avr_vmc_2023_action_bridge_interfaces
+	url = https://github.com/Daedalus-Robotics/avr_vmc_2023_action_bridge_interfaces.git

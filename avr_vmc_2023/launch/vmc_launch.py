@@ -133,6 +133,10 @@ def generate_launch_description():
                 'call_services_in_new_thread': 'true'
             }.items()
     )
+    action_bridge = Node(
+            package='avr_vmc_2023_action_bridge',
+            executable='action_bridge_node'
+    )
 
     return LaunchDescription([
         # diagnostic_aggregator,
@@ -144,6 +148,7 @@ def generate_launch_description():
         zed_wrapper,
         csi_driver,
         ros_bridge,
+        action_bridge,
         RegisterEventHandler(
             OnProcessStart(
                 target_action=pcc_uros_agent,
