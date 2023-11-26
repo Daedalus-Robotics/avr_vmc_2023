@@ -107,7 +107,8 @@ def generate_launch_description():
                     'stage_length': 100,
                     'stage_count': 2,
                     'min_value': 0,
-                    'servo_num': 0
+                    'servo_num': 0,
+                    'invert': True
                 }
             ]
     )
