@@ -83,7 +83,7 @@ def generate_launch_description():
     csi_driver = IncludeLaunchDescription(
             launch_description_source=PythonLaunchDescriptionSource([
                 FindPackageShare('avr_vmc_2023_csi_driver'),
-                '/launch/csi_driver_launch.py'
+                '/launch/csi_driver_raw_launch.py'
             ]),
             launch_arguments={
                 'framerate': '15',
@@ -95,6 +95,26 @@ def generate_launch_description():
                     'csi.yaml'
                 ])
             }.items()
+    )
+
+    apriltag_detector = Node(
+            package='apriltag_ros',
+            executable='apriltag_node',
+            namespace='apriltag',
+            remappings=[
+                ('image_rect', '/csi_camera/image_raw'),
+                ('camera_info', '/csi_camera/camera_info')
+            ],
+            parameters=[
+                {
+                    'image_transport': 'raw',
+                    'family': '36h11',
+                    'size': 0.2,  # ToDo: Get the actual size when some gets back to us on the forum
+                    'detector': {
+                        'threads': 2
+                    }
+                }
+            ]
     )
 
     # ---------- BDU ----------
@@ -148,6 +168,7 @@ def generate_launch_description():
         auton_drop,
         zed_wrapper,
         csi_driver,
+        apriltag_detector,
         ros_bridge,
         action_bridge,
         RegisterEventHandler(
